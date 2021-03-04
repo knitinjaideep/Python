@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jan 28 09:04:27 2021
+
+@author: nitinkotcherlakota
+"""
+
+def calc_drone_min_energy(route):
+  if len(route) <= 1:
+    return 0
+  energyReq = 0
+  energyWeHave = 0
+  for i in range(1, len(route)):
+    if route[i][2] > route[i-1][2]:
+      energyReq = energyWeHave - (route[i][2] - route[i-1][2])
+    energyWeHave += (route[i][2] - route[i-1][2])
+
+  return -1 * energyReq
+
+print(calc_drone_min_energy([[0,2,6], [10,10,20]]))

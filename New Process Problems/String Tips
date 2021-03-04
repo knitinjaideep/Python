@@ -1,0 +1,21 @@
+String Tips
+
+1. Use a length-256 integer array:
+- If we wanted to count the occurances of the each charater in a string, the obvious approach would be to use a dictionary, but thats not the best way to do it
+- A better way to do it would be to use a 256-len array (lets assume we are dealing with ASCII), where the index represents the ASCII value at tgat undex represents the count. 
+- Why? Its because arrays are a much simpler data structure. That means that the computer can manipulate them much faster and you will improve the efficiency of your code. 
+- The downside is that you may be allocating space that you don't need. A hashmap only allocates space for the characters present in the string. However, this is a small price to pay and the array is a relatively small fixed size, so it is usually worth the cost. 
+
+Practice problems:
+1. Anagrams
+2. Sorting the characters in a string
+3. Longest substring without a repeating character.
+
+
+2. Using 2 pointers:
+- Agorithms that use multiple pointers are super common all over the place. Therefore, its really good to have a firm grasp of some of the ways this can be helpful.
+- for instance, we can talk about finding all substrings of a string. Using 2 pointers and a nested for loop, we can find all the substrings quite easily, 
+	def substring(s):
+		for i in range(len(s) - 1):
+			for j in range(i + 1, len(s)):
+				print(s[i], s[j])
