@@ -2,7 +2,6 @@
 #s = 'A man, a plan, a canal: Pamana'
 #Output = True
 #Explanation: "amanaplanacanalpamana" is a palindrome
-
 #Time Complexity: O(n) | space: O(1)
 def isPalindrome(s):
     """

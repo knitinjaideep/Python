@@ -43,3 +43,4 @@ def reverseEachWord(s):
     return s
 
 print(reverseWords(["t","h","e"," ","s","k","y"," ","i","s"," ","b","l","u","e"]))
+
